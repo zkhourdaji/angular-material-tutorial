@@ -1,3 +1,32 @@
+<div class="top"></div>
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [(opened)]="opened">Sidenav</mat-sidenav>
+  <mat-sidenav-content>Main
+    <button (click)="opened=!opened">Toggle Opened</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<mat-toolbar>
+  <span>Mat tool bar</span>
+</mat-toolbar>
+
+<mat-progress-spinner [value]="spinner"></mat-progress-spinner>
+<mat-spinner></mat-spinner>
+
+<div>
+  <span matBadge="5" matBadgeOverlap="false">Notifications</span>
+</div>
+
+<div>
+  <span matBadge="5" matBadgePosition="below before" matBadgeSize="large" matBadgeOverlap="false">Notifications</span>
+</div>
+<br>
+<div>
+  <span matBadge="5" matBadgePosition="above before" matBadgeSize="small" matBadgeColor="warn"
+    matBadgeOverlap="false">Notifications</span>
+</div>
+
 <button mat-button>Material Button</button>
 <button mat-raised-button>Material Raised Button</button>
 <button mat-flat-button>Material Flat Button</button>

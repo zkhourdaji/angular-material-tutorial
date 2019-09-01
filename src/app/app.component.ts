@@ -9,6 +9,10 @@ import { MatButtonToggleGroup } from '@angular/material';
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'angular-material-tutorial';
 
+  spinner = 0;
+  opened = false;
+
+
   @ViewChild('myToggleGroup', { static: false })
   myToggleGroup: ElementRef;
 
@@ -16,7 +20,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   toggleGroup: MatButtonToggleGroup;
 
   ngOnInit() {
-    console.log(this.myToggleGroup);
+    setInterval(() => {
+      this.spinner++;
+    }, 50);
   }
 
   ngAfterViewInit() {
